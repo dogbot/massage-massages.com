@@ -26,6 +26,7 @@
     20. Date & Time Picker
     21. Accordion Class Toggler
     22. Parallax Effect
+    23. Mine
   */
   /*=================================
       JS Index End
@@ -369,12 +370,12 @@
   /*----------- 08. Ajax Contact Form ----------*/
   var form = ".ajax-contact";
   var invalidCls = "is-invalid";
-  var $email = '[name="email"]';
-  var $validation = '[name="name"],[name="email"],[name="subject"],[name="message"]'; // Must be use (,) without any space
+  var $clientEmail = '[name="clientEmail"]';
+  var $validation = '[name="name"],[name="clientEmail"],[name="subject"],[name="message"]'; // Must be use (,) without any space
   var formMessages = $(form).find(".form-messages");
 
   var appointmentForm = ".appointment-form";
-  var appointmentValidation = '[name="name"],[name="email"],[name="subject"],[name="number"],[name="date"]'; // Must be use (,) without any space
+  var appointmentValidation = '[name="name"],[name="clientEmail"],[name="subject"],[name="number"],[name="date"]'; // Must be use (,) without any space
   var appointmentFormMessages = $(appointmentForm).find(".form-messages");
 
   function sendContact(formEle, inputs, emailInput, errorCls, messageElement) {
@@ -454,7 +455,7 @@
 
   $(appointmentForm).on("submit", function (element) {
     element.preventDefault();
-    sendContact(appointmentForm, appointmentValidation, $email, invalidCls, appointmentFormMessages);
+    sendContact(appointmentForm, appointmentValidation, $clientEmail, invalidCls, appointmentFormMessages);
   });
 
   /*----------- 09. Magnific Popup ----------*/
@@ -885,7 +886,9 @@
   /*---------- 22. Parallax Effect ----------*/
   new universalParallax().init();
 
-
+  /*-----------21. Mine ------------------*/
   
+    // Get the user's current time
+    $('#clientTime').val(new Date().toLocaleString('en-US'));
 
 })(jQuery);

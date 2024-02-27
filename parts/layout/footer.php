@@ -16,14 +16,14 @@
                         </div>
                     </div>
                     <div class="col-md-7 col-lg-4">
-                        <form action="#" class="form-style1">
+                        <!-- <form action="#" class="form-style1">
                             <h3 class="form-title">Our newsletter</h3>
                             <div class="form-group">
                                 <input type="email" placeholder="Enter your email...">
                                 <button class="vs-btn" type="submit">Subscribe</button>
                             </div>
-                        </form>
-                    </div>
+                        </form>-->
+                    </div> 
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@ include("footer-widgets.php");
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-md-auto text-center">
-                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> <?php echo date("Y"); ?> <a href="index.html"><?= $site_name; ?></a>. All Rights Reserved By <a href="https://massage-massages.com/copyright.php">MassAll</a></p>
+                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> <?php echo date("Y"); ?> <a href="index.html"><?PHP $site_name; ?></a>. All Rights Reserved By <a href="https://massage-massages.com/copyright.php">MassAll</a></p>
                     </div>
                     <div class="col-auto d-none d-md-block">
                         <img src="assets/img/widget/cards.png" alt="cards">

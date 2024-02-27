@@ -18,23 +18,26 @@ function getClientIP() {
         $ipaddress = 'UNKNOWN';
     return $ipaddress;
 }
-
 // Get the user's IP address
-$userIP = getClientIP();
+
+$clientIP = getClientIP();
 
 // Query IP-API service
-$apiUrl = "http://ip-api.com/json/{$userIP}?fields=query,city,country,zip,timezone,org";
+$apiUrl = "http://ip-api.com/json/{$clientIP}?fields=query,city,country,countryCode,zip,timezone,org,region,regionName";
 $locationInfo = file_get_contents($apiUrl);
 
-// Parse JSON response
 $locationData = json_decode($locationInfo, true);
 
-// Extract relevant location data
-$userLocation = "{$locationData['city']}, 
-{$locationData['country']}, 
-{$locationData['zip']}";
-$userTimezone = $locationData['timezone'];
-$userOrganization = $locationData['org'];
-
-// Populate the user_location, user_timezone, and user_organization hidden fields in the form with the inferred information
-?>
+if (count($locationData) === 1) {
+    $locationData = array(
+        'Country' => 'United States',
+        'CountryCode' => 'US',
+        'City' => 'Washington',
+        'Region' => 'DC',
+        'RegionName' => 'District of Columbia',
+        'Zip' => '20005',
+        'Timezone' => 'NewYork',
+        'Org' => 'Unknown',
+        'Query' => 'Unknown'
+    );
+};

@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-8 col-xxl-auto wow fadeInUp" data-wow-delay="0.3s">
                     <div class="title-area text-center text-md-start">
-                        <span class="text-white sec-subtitle">Experience <?= $site_name; ?> <span class="sec-subtext bg-theme">25 Years</span></span>
+                        <span class="text-white sec-subtitle">Experience <?PHP $site_name; ?> <span class="sec-subtext bg-theme">25 Years</span></span>
                         <h2 class="text-white sec-title">Perfect Package</h2>
                     </div>
                     <div class="price-inner2">

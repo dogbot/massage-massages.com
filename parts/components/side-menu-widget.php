@@ -7,15 +7,15 @@
                 </div>
                 <div class="info-media1">
                     <div class="media-icon"><i class="fal fa-map-marker-alt"></i></div>
-                    <span class="media-label"><?= $cms_info_media_location; ?></span>
+                    <span class="media-label"><?PHP $cms_location; ?></span>
                 </div>
                 <div class="info-media1">
                     <div class="media-icon"><i class="far fa-phone-alt "></i></div>
-                    <span class="media-label"><a href="<?= $cms_info_media_phone_link; ?>" class="text-inherit"><?= $cms_info_media_phone_formatted; ?></a></span>
+                    <span class="media-label"><a href="<?PHP $site_phone; ?>" class="text-inherit"><?PHP $site_phone; ?></a></span>
                 </div>
                 <div class="info-media1">
                     <div class="media-icon"><i class="fal fa-envelope"></i></div>
-                    <span class="media-label"><a class="text-inherit" href="mailto:<?= $cms_info_media_email_link ;?> "><?= $cms_info_media_email_formatted ;?> </a></span>
+                    <span class="media-label"><a class="text-inherit" href="mailto:<?PHP $site_email ;?> "><?PHP $site_email ;?> </a></span>
                 </div>
             </div>
             <div class="widget  ">

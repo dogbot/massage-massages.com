@@ -1,22 +1,32 @@
 <?php
-$site_name="MassagesMassages";
-$site_domain="massage-massages.com";
-$site_mktg_user="";
+
+$cms_city = $locationData['City']?:"City";
+$cms_country = $locationData['CountryCode']?:"USA";
+$cms_st = $locationData['Region']?:"ST";
+$cms_state = $locationData['RegionName']?:"State";
+$cms_zip = $locationData['Zip']?:"20005";
 
 
-$cms_info_media_city = "Los Alamois";
-$cms_info_media_country = "USA";
-$cms_info_media_st = "ST";
-$cms_info_media_state = "State";
-$cms_info_media_zip = "12345";
-$cms_info_media_phone_link="";
-$cms_info_media_phone_formatted  = "";
 
-$cms_info_media_email_link= empty($site_mktg_user)?"":$site_mktg_user."@".$site_domain;
-$cms_info_media_email_formatted= empty($site_mktg_user)?"":$site_mktg_user."@".$site_domain;
 
-$cms_hero_title = "At home massage";
-$cms_hero_breadcrum = array("Today","Professional", "Convenient");
+
+$page_type = "home";
+$page_title = "Massage Services";
+$page_keywords = "massage, home massage, massage at home, massage therapy, 
+massage near me, massage service, massage spa, massage therapist, 
+massage at home, massage at home near me, massage at home service, 
+massage at home spa, massage at home therapist, massage";
+
+$page_description = "Indulge in the luxury of personalized massages by 
+independent therapists, right in the comfort of your own home. Experience 
+relaxation on your terms with our at-home massage service. Book now for a 
+bespoke wellness experience."; 
+  
+$page_description_shrt = "At-home massage therapy.";
+
+
+$cms_hero_title = "Home Serenity";
+$cms_hero_breadcrum = array("Today","Professional", "Convenient", "Personalized Massage Therapy at Your Doorstep");
 
 // value  proposition
 $cms_val_title="Relaxation delivered to your door step";

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="title-area text-center">
                 <span class="sec-subtitle">client testimonial</span>
-                <h2 class="sec-title"><?= $site_name; ?> Customers</h2>
+                <h2 class="sec-title"><?php echo $site_name; ?> Customers</h2>
             </div>
             <div class="pb-1px"></div>
             <div class="testi-style2">
@@ -15,10 +15,10 @@
                 <?php
                     foreach ($json_testimonials_data['testimonials'] as $testimonial) {?>
                     <div>
-                        <p class="testi-text"><?= $testimonial['content']?></p>
+                        <p class="testi-text"><?php echo $testimonial['content']; ?></p>
                         <div class="arrow-shape"><i class="arrow"></i><i class="arrow"></i><i class="arrow"></i><i class="arrow"></i></div>
-                        <h3 class="testi-name h5"><?=$testimonial['author']?></h3>
-                        <span class="testi-degi"><?=$testimonial['other']?></span>
+                        <h3 class="testi-name h5"><?php echo $testimonial['author']; ?></h3>
+                        <span class="testi-degi"><?php echo $testimonial['other']; ?></span>
                     </div>
                 <?php }?>
                 </div>
