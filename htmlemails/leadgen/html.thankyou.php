@@ -29,7 +29,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="/* padding: 0px 40px; */">
+                    <td>
                         <table
                             style=" padding: 40px; border-spacing: 0; width: -webkit-fill-available; background-color: #e3907c;">
                             <tbody>
