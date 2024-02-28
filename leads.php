@@ -1,6 +1,6 @@
 <?php
 
-include("cms/confg.db.php");
+
 function clean($input, $type = 'text', $connection = null)
 {
     // Trim white space

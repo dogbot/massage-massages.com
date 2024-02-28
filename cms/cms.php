@@ -6,10 +6,6 @@ $cms_st = $locationData['region']?:"ST";
 $cms_state = $locationData['regionName']?:"State";
 $cms_zip = $locationData['zip']?:"20005";
 
-
-
-
-
 $page_type = "home";
 $page_title = "Massage Services";
 $page_keywords = "massage, home massage, massage at home, massage therapy, 
@@ -23,7 +19,6 @@ relaxation on your terms with our at-home massage service. Book now for a
 bespoke wellness experience."; 
   
 $page_description_shrt = "At-home massage therapy.";
-
 
 $cms_hero_title = "Home Serenity";
 $cms_hero_breadcrum = array("Today","Professional", "Convenient", "Personalized Massage Therapy at Your Doorstep");
