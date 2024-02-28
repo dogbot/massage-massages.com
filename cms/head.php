@@ -9,6 +9,17 @@
         <?php echo $page_description_shrt;?> - 
         <?php echo $page_type ?>
     </title>
+    <!--
+     <?php 
+     echo "
+     clientIP $clientIP \n
+     apiUrl $apiUrl  \n
+     locationInfo $locationInfo  \n
+     ip_src $ip_src \n
+      "; 
+     ?>
+    
+    -->
     <meta name="author" content="MassAll">
     <meta name="description" content="<?php echo $page_description;?>
 

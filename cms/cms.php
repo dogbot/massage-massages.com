@@ -1,10 +1,10 @@
 <?php
 
-$cms_city = $locationData['City']?:"City";
-$cms_country = $locationData['CountryCode']?:"USA";
-$cms_st = $locationData['Region']?:"ST";
-$cms_state = $locationData['RegionName']?:"State";
-$cms_zip = $locationData['Zip']?:"20005";
+$cms_city = $locationData['city']?:"City";
+$cms_country = $locationData['countryCode']?:"USA";
+$cms_st = $locationData['region']?:"ST";
+$cms_state = $locationData['regionName']?:"State";
+$cms_zip = $locationData['zip']?:"20005";
 
 
 

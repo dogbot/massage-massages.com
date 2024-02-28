@@ -60,17 +60,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $clientNumber =     clean($_POST['clientNumber'], 'int');
     $serviceRequested = clean($_POST['serviceRequested']);
     $serviceLocation =  clean($_POST['serviceLocation']);
-    $apiCountry =       clean($_POST['apiCountry']);
-    $apiCountryCode =   clean($_POST['apiCountryCode']);
-    $apiCity =          clean($_POST['apiCity']);
-    $apiRegion =        clean($_POST['apiRegion']);
-    $apiRegionName =    clean($_POST['apiRegionName']);
-    $apiZip =           clean($_POST['apiZip']);
-    $apiTimezone =      clean($_POST['apiTimezone']);
-    $apiOrg =           clean($_POST['apiOrg']);
-    $apiQuery =         clean($_POST['apiQuery']);
+    $apiCountry =       clean($_POST['apicountry']);
+    $apiCountryCode =   clean($_POST['apicountryCode']);
+    $apiCity =          clean($_POST['apicity']);
+    $apiRegion =        clean($_POST['apiregion']);
+    $apiRegionName =    clean($_POST['apiregionName']);
+    $apiZip =           clean($_POST['apizip']);
+    $apiTimezone =      clean($_POST['apitimezone']);
+    $apiOrg =           clean($_POST['apiorg']);
+    $apiQuery =         clean($_POST['apiquery']);
     $leadSource =       clean($_POST['leadSource']);
-    $clientTime =       clean($_POST['']);
+    $clientTime =       clean($_POST['clientTime']);
     $serverTime =       clean($_POST['serverTime']);
 
 
@@ -124,19 +124,12 @@ mysqli_report(MYSQLI_REPORT_ALL);
 
                             
                             if ($conn->query($sql) === TRUE) {
-                                echo "New record created successfully";
+                                echo "Thank you, we have received your information. ";
                             } else {
-                                echo "Error: " . $sql . "<br>" . $conn->error;
+                                echo "Thank You! <!-- hidden Error: " . $sql . "<br>" . $conn->error ." -->";
                             }
 
 
-                              
-        // Check connection
-        // if ($conn->connect_error) {
-        //     die("Database Connection Error: " . $conn->connect_error);
-        // } else {
-        //     echo "DB ok ";
-        // }
     
 
     // Close connection
@@ -145,8 +138,9 @@ mysqli_report(MYSQLI_REPORT_ALL);
     // Set the recipient email address.
     // Build the email headers.
     $notice_headers = "From: $clientName <$clientEmail>";
-    $client_headers = "From: Massage-massages.com <m.gandel@massage-massages.com>\r\n";
-    $client_headers .= "Reply-To: Methera Gandel <m.gandel@massage-massages.com>\r\n";
+    
+    $client_headers = "From: Massage-massages.com <serviceteam@massage-massages.com>\r\n";
+    $client_headers .= "Reply-To: Methera Gandel <serviceteam@massage-massages.com>\r\n";
 
     // Set the email serviceRequested.
     $notice_serviceRequested = "massage-massages.com: New lead";
@@ -178,25 +172,26 @@ mysqli_report(MYSQLI_REPORT_ALL);
     include 'htmlemails/leadgen/html.thankyou.php'; //returns:  $client_message, $client_headers
 
 
-
     // Sending the emails
     // Send the notice email.
     if (mail($notice_email, $notice_serviceRequested, $notice_message, $notice_headers)) {
-        $notice_notification = true;
+        echo 'We are matching you to a professional therapist. ';
     } else {
-        $notice_notification = false;
+        echo 'We will contact you soon. ';
     }
+    
+    
     // Send the client email.
     if (mail($client_email, $client_serviceRequested, $client_message, $client_headers)) {
         $client_notification = true;
         // Set a 200 (okay) response code.
         http_response_code(200);
-        echo "Thank Your Appointment! Your appointment has been booked. We will contact you soon.";
+        echo "Please be on the lookout for our confirmation email.";
     } else {
         // Set a 500 (internal server error) response code.
         $client_notification = false;
         http_response_code(500);
-        echo "Oops! Something went wrong and we couldn't send your appointment.";
+        echo "Something went wrong and we couldn't send your email.";
     }
 
 } else {

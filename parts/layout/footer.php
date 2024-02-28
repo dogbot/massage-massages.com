@@ -16,6 +16,7 @@
                         </div>
                     </div>
                     <div class="col-md-7 col-lg-4">
+                        <?php include $_SERVER['DOCUMENT_ROOT']."/parts/util/formfillhelper.php";?>
                         <!-- <form action="#" class="form-style1">
                             <h3 class="form-title">Our newsletter</h3>
                             <div class="form-group">
