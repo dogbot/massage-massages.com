@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/
+    - export DEPLOYPATH=/home/colinane/repositories/massage-massages.com
     - /bin/cp -R images $DEPLOYPATH
