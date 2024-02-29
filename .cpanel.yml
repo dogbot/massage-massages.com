@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/colinane/repositories/massage-massages.com
+    - export SOURCEPATH=/home/colinane/repositories/massage-massages.com/*
     - export TARGETPATH=/home/colinane/massage-massages.com
-    - rsync -a source/ $DEPLOYPATH
+    - rsync -a $REPOSPATH $TARGETPATH
